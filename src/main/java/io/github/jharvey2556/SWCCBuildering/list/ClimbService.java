@@ -1,5 +1,7 @@
 package io.github.jharvey2556.SWCCBuildering.list;
 
-public class ClimbService {
+import java.util.List;
 
+public interface ClimbService {
+    List<ClimbItem> getClimbs();
 }
