@@ -20,7 +20,7 @@
         <tbody>
             <tr th:each="climb : ${climbs}">
                 <td th:text="${climb.id}">1</td>
-                <td th:text="${climb.name}">Midnight Lightning</td>
+                <td><a th:href="@{/climbs/{id}(id=${climb.id})}" th:text="${climb.name}">Midnight Lightning</a></td>
                 <td th:text="${climb.grade}">V8</td>
                 <td th:text="${climb.stars}">3</td>
                 <td th:text="${climb.location}">Camp 4</td>

@@ -28,4 +28,10 @@ public class ClimbRepositoryImpl implements ClimbRepository {
         String sql = "SELECT id, name, grade, stars, location, description FROM climb";
         return jdbc.query(sql, climbMapper);
     }
+
+    @Override 
+    public ClimbItem getClimb(Long id) {
+        String sql = "SELECT * FROM climb WHERE id = ?";
+        return jdbc.queryForObject(sql, climbMapper, id);
+    }
 }
