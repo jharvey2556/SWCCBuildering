@@ -4,7 +4,7 @@
     <title th:text="${climb.name}">Climb Detail</title>
 </head>
 <body>
-    <h1>All Routes</h1>
+    <h1 th:text="${climb.name}">Climb Detail</h1>
 
     <table border="1">
         <thead>
@@ -18,14 +18,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr th:each="climb : ${climbs}">
-                <td th:text="${climb.id}">1</td>
-                <td><a th:href="@{/climbs/{id}(id=${climb.id})}" th:text="${climb.name}">Midnight Lightning</a></td>
-                <td th:text="${climb.grade}">V8</td>
-                <td th:text="${climb.stars}">3</td>
-                <td th:text="${climb.location}">Camp 4</td>
-                <td th:text="${climb.description}">Famous boulder problem</td>
-            </tr>
+            <td th:text="${climb.id}">1</td>
+            <td th:text="${climb.name}">Climb name</td>
+            <td th:text="${climb.grade}">Grade</td>
+            <td th:text="${climb.stars}">Stars</td>
+            <td th:text="${climb.location}">Location</td>
+            <td th:text="${climb.description}">Description</td>
         </tbody>
     </table>
 </body>
